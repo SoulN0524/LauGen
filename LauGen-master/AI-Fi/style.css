@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* 前置樣式設定，將所有元素的邊距、內距歸零，盒模型設定為邊框盒模型，字體設定為DFkai-sb、sans-serif字型。 */
+
+header nav {
+  font-weight: bold;
+}
+
+header nav img {
+  width: 150px;
+  height: 50px;
+  padding: 15px 20px;
+}
+
+header nav ul {
+  /* box-sizing: content-box; */
+  background-color: #fdd46b;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  align-items: center;
+  text-align: center;
+}
+
+/*  */
+.dropdown-content {
+  display: none; /* 隱藏下拉式選單 */
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.Chinese:hover .dropdown-content {
+  display: block; /* 顯示下拉式選單 */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #fdd46b;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 1); /* 內框陰影 */
+}
+
+/*  */
+header nav ul li.Chinese {
+  width: 150px;
+  padding: 24px 24px 0px 24px;
+}
+
+header nav ul li.English {
+  width: 150px;
+  padding: 0px 24px 24px 24px;
+}
+
+nav ul li.Chinese a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+nav ul li.English a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+/* header的設定 接下來為各頁的自我設計 */
+
+/* index.html */
+.product-features {
+  padding: 50px 0;
+  text-align: center;
+  /* background-color: #f3f3f3; */
+}
+
+.product-features h2 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.product-features .slogan {
+  font-size: 1.5rem;
+  color: #cbcbcb;
+  margin-bottom: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.feature-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.feature-item {
+  width: 320px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: scale 0.25s ease-in-out, opacity 0.25s ease-in-out,
+    filter 0.25s ease-in-out;
+  &:hover {
+    scale: 1.1;
+  }
+}
+
+.feature-item:has(.feature-item:hover).feature-container:not(:hover) {
+  scale: 0.8;
+  opacity: 0.8;
+  filter: blur(4px);
+}
+
+.feature-icon img {
+  width: 240px;
+  height: 160px;
+}
+
+.feature-item h3 {
+  padding: 0.7rem 0 0.3rem 0;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 800;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 600;
+}
+
+main div.background {
+  padding: 1rem;
+  background-image: url(https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJsYWNrfGVufDB8fDB8fHww);
+  opacity: 0.95;
+  width: 100%;
+  height: 100%;
+}
+
+/* service.html */
+
+main.no-flex {
+  display: block;
+  text-align: center;
+}
+
+h2.ser {
+  margin: 20px 300px;
+  padding: 0.5rem 0 0.5rem 0;
+  font-size: 2.5rem;
+  font-weight: 1000;
+  color: rgb(6, 120, 120);
+  border: 3px solid burlywood;
+}
+
+.tradingview-widget-container {
+  margin: 0px 20px 20px 20px;
+  padding: 20px;
+  background-color: #f0f0f0; /* 將背景色改為灰色 */
+  box-shadow: 5px 5px 2px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px; /* 添加圓角 */
+}
+
+.Figma {
+  margin: 0px 20px 20px 20px;
+  padding: 20px;
+  background-color: #f0f0f0; /* 將背景色改為灰色 */
+  box-shadow: 5px 5px 2px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px; /* 添加圓角 */
+}
