@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 import json
+import time
 import random
 import plotly
 import plotly.graph_objects as go
@@ -18,6 +19,7 @@ def create_plot():
 app = Flask(__name__)
 
 @app.route('/')
+@app.route('/index.html')
 @app.route('/templates/index.html')
 def home():
     return render_template('index.html')
@@ -38,7 +40,7 @@ def setChatMessage():
     if request.method == 'POST':
         user_message = request.form['message']
         mode = request.form['mode']
-        
+        time.sleep(1.5)
         bot_message = generateRandomMessage(mode)
         
         # 讀取現有的消息資料
